@@ -41,6 +41,7 @@ public class UnpackDependenciesExecutor extends BaseMojoExecutor {
 
 		execMojo(MagicGoals.DEPENDENCIES_UNPACK_DEPS, //
 				configuration(//
+						element("excludeTypes", "pom"),
 						element("outputDirectory", MagicAppJarPlugin.APPJAR_BUILD_DIR + "/" + MagicAppJarBoot.LIB_PREFIX), //
 						element("useSubDirectoryPerArtifact", "true")));
 	}
